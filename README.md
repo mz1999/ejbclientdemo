@@ -4,7 +4,7 @@
 
 `EJB3`的`Stateless Session Bean`可以同时支持`RMI-IIOP`和`Web Service`等多种远程调用方式，只要Bean同时实现多种接口：
 
-业务接口
+* 业务接口
 
 ```
 public interface BusinessService {
@@ -16,7 +16,7 @@ public interface BusinessService {
 
 ``` 
 
-`Remote`接口
+* `Remote`接口
 
 ```
 @Remote
@@ -24,7 +24,7 @@ public interface BusinessServiceRemote extends BusinessService {
 }
 ```
 
-`Local`和`Restful Web Service`接口
+* `Local`和`Restful Web Service`接口
 
 ```
 @Local
@@ -48,7 +48,7 @@ public interface BusinessServiceLocal extends BusinessService {
 }
 ```
 
-Bean同时实现多种接口
+* Bean同时实现多种接口
 
 ```
 @Stateless
